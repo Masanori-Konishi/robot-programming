@@ -46,8 +46,8 @@ $ rosrun image_view2 image_view2 image:=/camera/rgb/image_raw ~image_transport:=
 Start Checkerboard Tracking Tracking node
 -----------------------------------------
 ```
-$ roslaunch roseus_tutorials checkerboard-detector.launch rect0_size_x:=0.02 rect0_size_y:=0.02 \
-      grid0_size_x:=7 grid0_size_y:=4 translation0:="0 0 0" \
+$ roslaunch roseus_tutorials checkerboard_detector.launch simulation:=false rect0_size_x:=0.02 rect0_size_y:=0.02 \
+      grid0_size_y:=4 translation0:="0 0 0" \
       image:=image_raw  group:=/camera/rgb frame_id:=camera_rgb_optical_frame
 $ ROS_NAMESPACE=/camera/rgb rosrun checkerboard_detector objectdetection_tf_publisher.py \
        _use_simple_tf:=true
